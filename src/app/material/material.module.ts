@@ -12,6 +12,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 
 @NgModule({
@@ -28,7 +31,9 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     MatMenuModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatBadgeModule
   ],
   exports: [
     LayoutModule,
@@ -41,7 +46,9 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     MatMenuModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }
