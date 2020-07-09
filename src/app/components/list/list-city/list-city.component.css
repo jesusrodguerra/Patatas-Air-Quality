@@ -1,0 +1,19 @@
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.title h2{
+    margin-bottom: 0;
+}
+
+hr{
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.full-width-table {
+    width: 100%;
+}
+  
