@@ -18,6 +18,10 @@ ng-container {
     justify-content: center;
 }
 
+.id-padding{
+    padding-right: 12px;
+}
+
 .full-width-table {
     width: 100%;
 }

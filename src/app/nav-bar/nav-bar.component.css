@@ -10,6 +10,10 @@
   background: inherit;
 }
 
+.mat-toolbar{
+  background: linear-gradient(90deg, #2C5364, #0F2027);
+}
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;

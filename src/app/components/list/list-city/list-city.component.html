@@ -4,8 +4,8 @@
 <hr>
 <table [dataSource]="city" mat-table class="mat-elevation-z8 full-width-table">
     <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let city"> {{city.Id}} </td>
+        <th class="id-padding" mat-header-cell *matHeaderCellDef> ID </th>
+        <td class="id-padding" mat-cell *matCellDef="let city"> {{city.Id}} </td>
     </ng-container>
     <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>

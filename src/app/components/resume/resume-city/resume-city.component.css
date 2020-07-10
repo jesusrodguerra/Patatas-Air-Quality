@@ -1,3 +1,8 @@
+.card{
+    border: 2px solid;
+    border-radius: 6px;
+}
+
 .body-name .name p{
     margin-bottom: 0;
 }
@@ -18,12 +23,12 @@ hr {
     background-color: rgba(0,0,0, .2);
 }
 .red-border {
-    border-color: red;
+    border-color: #e8505b;
 }
 .yellow-border {
-    border-color: yellow;
+    border-color: #ffcd3c;
 }
-.green-border {
-    border-color: green;
+.blue-border {
+    border-color: #14b1ab;
 }
 
