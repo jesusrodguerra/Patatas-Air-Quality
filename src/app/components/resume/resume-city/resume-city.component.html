@@ -1,23 +1,33 @@
-<div *ngFor=" let device of devices">
-    <div class="card" style="width:400px">
-        <div class="card-body">
-            <div class="body d-flex">
-                <div class="id">
-                    <span class="badge badge-pill badge-secondary"> {{ device.Id }} </span>
-                </div>
-                <div class="activity ml-4">
-                    <p> {{ device.LastActivity }} </p>
-                </div>
-                <div class="temperature ml-4">
-                    <strong> {{ device.Temperature }}°C </strong>
-                </div>
-            </div>
-            <div class="body-name mt-4">
-                <div class="name">
-                    <p> {{device.Name}} </p>
-                </div>
-                <div class="city">
-                    <strong> {{ device.CityId }} </strong>
+<div class="title d-flex justify-content-center">
+    <h1>Devices</h1>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div *ngFor=" let device of devices" class="col-sm-12 col-md-6">
+            <div class="card mt-3 {{device.AirQuality < 1 ? 'red-border' : device.AirQuality == 1 ? 'yellow-border' : 'green-border'}}" style="width:100%">
+                <div class="card-body">
+                    <div class="body d-flex justify-content-around">
+                        <div class="id">
+                            <span class="badge badge-pill badge-secondary"> {{ device.Id }} </span>
+                        </div>
+                        <div class="activity ml-4">
+                            <p> {{ device.LastActivity }} </p>
+                        </div>
+                        <div class="temperature ml-4">
+                            <strong> {{ device.Temperature }}°C </strong>
+                        </div>
+                    </div>
+                    <div class="body-name mt-4 d-flex justify-content-between">
+                        <div class="name">
+                            <strong> {{device.Name}} </strong>
+                            <p> {{ device.CityId }} </p>
+                        </div>
+                        
+                        <div class="storm"style="{{ device.StormLevel == 'none' ? 'display: block' : 'display: none'}}" >
+                            <img src="assets/weather.svg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
