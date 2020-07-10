@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div *ngFor=" let device of devices" class="col-sm-12 col-md-6">
-            <div class="card mt-3 {{device.AirQuality < 1 ? 'blue-border' : device.AirQuality == 1 ? 'yellow-border' : 'red-border'}}" style="width:100%">
+            <div class="card mt-3 {{device.AirQuality < 1 ? 'blue-border' : device.AirQuality === 1 ? 'yellow-border' : 'red-border'}}" style="width:100%">
                 <div class="card-body">
                     <div class="body d-flex justify-content-around">
                         <div class="id">
@@ -24,8 +24,10 @@
                             <p> {{ device.CityId }} </p>
                         </div>
                         
-                        <div class="storm"style="{{ device.StormLevel == 'none' ? 'display: block' : 'display: none'}}" >
-                            <img src="assets/weather.svg" alt="">
+                        <div class="storm">
+                            <span style="font-size: 30px;">
+                                <i class="fas {{ device.StormLevel === 'none' ? 'fa-cloud-sun' : device.StormLevel === 'electric' ? 'fa-poo-storm' : 'fa-radiation'}} "></i>
+                            </span>
                         </div>
                     </div>
                 </div>
