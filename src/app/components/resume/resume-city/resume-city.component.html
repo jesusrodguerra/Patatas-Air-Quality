@@ -1,1 +1,25 @@
-<p>resume-city works!</p>
+<div *ngFor=" let device of devices">
+    <div class="card" style="width:400px">
+        <div class="card-body">
+            <div class="body d-flex">
+                <div class="id">
+                    <span class="badge badge-pill badge-secondary"> {{ device.Id }} </span>
+                </div>
+                <div class="activity ml-4">
+                    <p> {{ device.LastActivity }} </p>
+                </div>
+                <div class="temperature ml-4">
+                    <strong> {{ device.Temperature }}°C </strong>
+                </div>
+            </div>
+            <div class="body-name mt-4">
+                <div class="name">
+                    <p> {{device.Name}} </p>
+                </div>
+                <div class="city">
+                    <strong> {{ device.CityId }} </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

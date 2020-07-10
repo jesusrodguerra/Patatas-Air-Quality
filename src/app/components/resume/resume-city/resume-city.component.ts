@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-resume-city',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeCityComponent implements OnInit {
 
-  constructor() { }
+  devices = [];
+
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
+    this.fetchDevices();
+  }
+
+  fetchDevices() {
+    this.dataService.getDevices().subscribe(devices => {
+      console.log(devices);
+      this.devices = devices;
+    });
   }
 
 }
